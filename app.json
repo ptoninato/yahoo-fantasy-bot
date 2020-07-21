@@ -34,27 +34,27 @@
     "YAHOO_CLIENT_ID": {
       "description": "Yahoo Client ID",
       "value": "",
-      "required": true
+      "required": false
     },
     "YAHOO_CLIENT_SECRET": {
       "description": "Yahoo Client Secret",
       "value": "",
-      "required": true
+      "required": false
     },
     "YAHOO_GAME_KEY": {
-      "description": "Yahoo Game Key: (NFL, NBA, MLB)",
+      "description": "Yahoo Game Key: (NBA, NFL, MLB)",
       "value": "",
-      "required": true
+      "required": false
     },
     "YAHOO_LEAGUE_ID": {
       "description": "Yahoo League ID",
       "value": "",
-      "required": true
+      "required": false
     },
     "OPT_IN_CLOSE_SCORE": {
       "description": "Interested in getting close score updates? (TRUE OR FALSE)",
       "value": "",
-      "required": true
+      "required": false
     }
   },
   "addons": [

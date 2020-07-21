@@ -10,7 +10,6 @@ import bot.utils.jobs.CloseScoreUpdateJob
 import bot.utils.jobs.MatchUpJob
 import bot.utils.jobs.ScoreUpdateJob
 import bot.utils.jobs.StandingsJob
-import bot.utils.models.YahooApiRequest
 import io.reactivex.rxjava3.core.Observable
 import shared.EnvVariable
 import shared.Postgres
@@ -32,7 +31,7 @@ object Arbiter {
         Observable.interval(0, 15, TimeUnit.SECONDS)
             .subscribe {
                 try {
-                    val event = DataRetriever.yahooApiRequest(YahooApiRequest.Transactions)
+                    val event = DataRetriever.getTransactions()
                     val latestTimeChecked = Postgres.latestTimeChecked
                     TransactionsBridge.dataObserver.accept(Pair(latestTimeChecked, event))
                     Postgres.saveLastTimeChecked()
