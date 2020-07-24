@@ -118,8 +118,8 @@ object Arbiter {
             JobRunner.createJob(CloseScoreUpdateJob::class.java, "0 30 23 ? 9-1 MON *")
         }
 
-        JobRunner.createJob(MatchUpJob::class.java, "0 30 3 ? 8-1 THU *")
-        JobRunner.createJob(StandingsJob::class.java, "0 30 3 ? 8-1 TUE *")
+        JobRunner.createJob(MatchUpJob::class.java, "0 30 3 ? 8-1 FRI *")
+        JobRunner.createJob(StandingsJob::class.java, "0 30 3 ? 8-1 FRI *")
 
         JobRunner.createJob(ScoreUpdateJob::class.java, "0 55 3 ? 8-1 FRI *")
         JobRunner.createJob(ScoreUpdateJob::class.java, "0 00 17 ? 9-1 SUN *")
